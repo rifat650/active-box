@@ -1,0 +1,629 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: "Raleway", sans-serif;
+}
+
+html {
+        font-size: 100%;
+}
+
+.container {
+        max-width: 1210px;
+        padding: 0 20px;
+        margin: auto;
+}
+
+:root {
+        --color1: #e84545;
+        --color2: #a1a3af;
+        --color3: #2d3033;
+        --color4: #6c7279;
+        --color5: #c6cacc;
+        --color6: #4e4e4e;
+        --color7: #53354a;
+        --color8: #313454;
+        --color9: #808080;
+}
+
+.primary-btn {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #fff;
+        background: var(--color1);
+        height: 4rem;
+        width: 12rem;
+        text-align: center;
+        display: inline-block;
+        line-height: 4rem;
+        border-radius: 1rem;
+        transition: all 0.3s linear;
+}
+
+.primary-btn:hover {
+        background-color: #c44646;
+        border: 1px solid #ffffff;
+        box-shadow: 0 0 1px #fff,
+                0 0 2px #fff,
+                0 0 4px #fff,
+                0 0 8px #fff,
+                0 0 1.6px #fff,
+                0 0 1.2px #fff;
+}
+
+
+/* header section start */
+.header-home {
+        background: url(Assets/bnrbg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+}
+
+.header-normal {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1210px;
+        padding: .5rem 20px 0;
+        margin: 0 auto;
+        background: transparent;
+        position: relative;
+}
+
+.header-fixed {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: .5rem 20px 0;
+        background: var(--color8);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+}
+
+.header-fixed::after,
+.header-normal::after {
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        content: "";
+        top: 100%;
+        left: 0;
+        background: #fff;
+}
+
+.logo {
+        width: 15rem;
+}
+
+.logo img {
+        width: 100%;
+}
+
+.navlinks li {
+        list-style-type: none;
+        display: inline-block;
+}
+
+.navlinks ul #cross-icon,
+.nav-active ul #cross-icon {
+        font-size: 2rem;
+        color: #fff;
+        display: none;
+}
+
+.navlinks a {
+        font-size: 1.2rem;
+        color: #fff;
+        text-transform: uppercase;
+        margin: 0 1rem;
+}
+
+.header-icons button {
+        height: 2rem;
+        width: 2rem;
+        font-size: 1.7rem;
+        background: transparent;
+        border: none;
+        color: #fff;
+        display: none;
+}
+
+/* header section end */
+/* home section start */
+.home {
+        text-align: center;
+        color: #fff;
+        padding: 10rem 0;
+}
+
+.home h1 {
+        font: "Open Sans", sans-serif;
+        font-size: 4rem;
+        text-transform: uppercase;
+        padding-bottom: 3rem;
+
+}
+
+.home p {
+        font-size: 1.5rem;
+        padding-bottom: 5rem;
+}
+
+/* home section end */
+/* features start */
+.features .cards-warper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 8rem 0;
+}
+
+.features .card {
+        width: 22rem;
+        height: 13rem;
+        text-align: center;
+        margin: 4rem 1rem;
+}
+
+.features img {
+        width: 8vw;
+        height: 10vh;
+        object-fit: contain;
+}
+
+.features h3 {
+        padding: 1.5rem 0 1rem 0;
+        font-size: 1.5rem;
+        font-weight: 600;
+
+}
+
+.features p {
+        color: var(--color4);
+}
+
+/* works starts */
+.works .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 0 .2rem;
+}
+
+.works .content .image {
+        position: relative;
+        width: 25rem;
+        height: 20rem;
+        margin: 1rem;
+        transition: all .3s linear;
+
+}
+
+.works .content .image .caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        opacity: 0;
+}
+
+.works .content .image .caption h5 {
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: #fff;
+}
+
+.works .content .image .caption p {
+        font-weight: 400;
+        font-size: 1.2rem;
+        color: #fff;
+}
+
+.works .content .image:hover .caption {
+        opacity: 1;
+}
+
+.works .content .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+}
+
+.works .content .image::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: #c44646;
+        opacity: 0
+}
+
+.works .content .image:hover::before {
+        opacity: 0.6;
+}
+
+/* works end */
+/* our team start */
+
+.our-team .card-warper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 8rem;
+}
+
+.our-team .card-warper .card {
+        width: 20rem;
+        margin: 2rem;
+}
+
+.our-team .card-warper .card img {
+        width: 100%;
+        height: 20rem;
+        object-fit: cover;
+}
+
+.our-team .card-warper .card h4 {
+        font-size: 1.4rem;
+        margin: 2rem 0 .8rem;
+        color: var(--color6);
+
+}
+
+.our-team .card-warper .card .role {
+        font-size: 1rem;
+        margin: 0 0 .8rem;
+        color: var(--color1);
+        font-weight: 500;
+}
+
+.our-team .card-warper .card p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+}
+
+.our-team .card-warper .card .icons i {
+        height: 2.5rem;
+        width: 2.5rem;
+        font-size: 1.5rem;
+        border: 1px solid var(--color2);
+        text-align: center;
+        line-height: 2.5rem;
+        color: var(--color2);
+        margin: 0 .5rem 1rem 0;
+        border-radius: .3rem;
+        transition: all .3s linear;
+}
+
+.our-team .card-warper .card .icons i:hover {
+        transform: scale(1.2);
+        color: var(--color1);
+        background: var(--color5);
+}
+
+/* our team ends */
+
+/* testimonial starts */
+.testimonial {
+        margin: 3rem 0;
+}
+
+.testimonial .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        background: var(--color7);
+
+}
+
+.testimonial .content .image {
+        width: 50vw;
+
+}
+
+.testimonial .content .image img {
+        width: 100%;
+}
+
+.testimonial .content .text {
+        flex: 1;
+        width: 50rem;
+        margin-left: 10rem;
+        padding: 3rem;
+
+}
+
+.testimonial .content .text p {
+        font-size: 2.5rem;
+        font-style: italic;
+        color: #fff;
+        padding-bottom: 2rem;
+
+}
+
+.testimonial .content .text span {
+        font-size: 1.5rem;
+        color: #fff;
+}
+
+/* testimonial ends */
+/* download starts  */
+.download .content {
+        text-align: center;
+        padding: 5rem 0;
+}
+
+.download .content h3 {
+        font-size: 2rem;
+        text-transform: uppercase;
+        color: var(--color6);
+        padding: 1.5rem 0;
+}
+
+.download .content p {
+        font-size: 1.5rem;
+        font-weight: 300;
+        padding: .5rem 0 1.5rem 0;
+}
+
+/* download ends */
+footer {
+        background: var(--color8);
+}
+
+footer .content {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        padding: 3rem 0;
+}
+
+footer .content .location,
+footer .content .social {
+        width: 20rem;
+        margin: 0 1rem;
+
+}
+
+footer .content .about-us {
+        width: 25rem;
+        margin: 0 1rem;
+}
+
+footer .content h5 {
+        font-size: 1.7rem;
+        color: #f0f0f0;
+        text-transform: uppercase;
+        padding: 3rem 0 1rem 0;
+}
+
+footer .content p {
+        font-size: 1.2rem;
+        color: var(--color5);
+}
+
+footer .content i {
+        font-size: 1.8rem;
+        color: var(--color5);
+        height: 3rem;
+        width: 3rem;
+        text-align: center;
+        line-height: 2.8rem;
+        border: 3px solid #fff;
+        margin: 0 .3rem;
+        color: #fff;
+}
+
+
+.socket {
+        background: #1e203b;
+}
+
+.socket .content {
+        text-align: center;
+        padding: 1rem 0;
+
+}
+
+.socket .content p {
+        color: #fff;
+        font-size: 1.2rem;
+        color: var(--color4);
+        line-height: 1.8rem;
+}
+
+.socket .content p span {
+        font-weight: 700;
+        color: #fff;
+        text-transform: capitalize;
+}
+
+
+@media(max-width:1920px) {
+        .testimonial .content .text {
+                margin-left: 2rem;
+        }
+}
+
+@media(max-width:1680px) {
+        .home {
+                padding: 10rem 10rem;
+        }
+
+        .home h1 br,
+        .home p br {
+                display: none;
+        }
+}
+
+@media(max-width:1280px) {
+        html {
+                font-size: 90%;
+        }
+
+        .testimonial .content .image {
+                width: 40rem;
+        }
+}
+
+@media(max-width:1024px) {
+        html {
+                font-size: 85%;
+        }
+
+        .home {
+                padding: 10rem 2rem;
+        }
+
+        .header-normal {
+                padding: .5rem 10px 0;
+        }
+
+        .navlinks ul li a {
+                margin: 0 .5rem;
+        }
+
+        .testimonial .content .image {
+                width: 100%;
+        }
+
+        .testimonial .content .text {
+                width: 100%;
+                padding: 3rem;
+        }
+}
+
+@media(max-width:768px) {
+        html {
+                font-size: 70%;
+        }
+
+        .navlinks {
+                position: fixed;
+                top: 0;
+                right: -320px;
+                width: 320px;
+                height: 100vh;
+                background: #2d303373;
+                backdrop-filter: blur(5rem);
+                z-index: 99;
+                border-top-left-radius: 2rem;
+                border-bottom-left-radius: 2rem;
+                transition: all 0.3s linear;
+        }
+
+        .nav-active {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 320px;
+                height: 100vh;
+                background: #2d303373;
+                backdrop-filter: blur(5rem);
+                z-index: 99;
+                border-top-left-radius: 2rem;
+                border-bottom-left-radius: 2rem;
+                transition: all 0.3s linear;
+        }
+
+        .navlinks ul li,
+        .nav-active ul li {
+                list-style-type: none;
+                display: block;
+                padding: 1.3rem 0;
+
+        }
+
+        .navlinks ul li:hover,
+        .nav-active ul li:hover {
+                background: var(--color8);
+        }
+
+        .navlinks ul li a,
+        .nav-active ul li a {
+                font-size: 2rem;
+                font-family: "Raleway", sans-serif;
+                color: #fff;
+                text-align: center;
+                text-transform: uppercase;
+                display: block;
+        }
+
+        .header-icons button {
+                display: block;
+        }
+
+        .header-normal {
+                padding: .5rem 20px 0;
+        }
+
+        .navlinks ul #cross-icon,
+        .nav-active ul #cross-icon {
+                font-size: 2rem;
+                padding: 2rem;
+                color: #fff;
+                display: block;
+        }
+
+        .navlinks ul #cross-icon:hover,
+        .nav-active ul #cross-icon:hover {
+                color: var(--color1);
+                background: transparent;
+        }
+
+        .logo {
+                width: 12rem;
+        }
+
+        .home h1 {
+                font-size: 2.58rem;
+
+        }
+
+        .features .card img {
+                width: 12vw;
+                height: 15vh;
+                object-fit: contain;
+        }
+
+        .features .card h3 {
+                font-family: "Raleway", sans-serif;
+                font-size: 1.5rem;
+                font-weight: 800;
+
+        }
+
+
+}
+
+@media(max-width:480px) {
+        .works .content img {
+                width: 80vw;
+                height: 80vw;
+                object-fit: contain;
+        }
+
+        .works .content {
+                gap: 0;
+        }
+        .nav-active {
+                width: 100%;
+        }
+}
